@@ -1,0 +1,2 @@
+# Embedded file name: vendor\httplib2\test\brokensocket\socket.py
+from realsocket import gaierror, error, getaddrinfo, SOCK_STREAM

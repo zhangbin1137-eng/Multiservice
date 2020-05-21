@@ -1,0 +1,790 @@
+# Embedded file name: lib\common\rpcstruct.py
+
+
+class AddObject:
+    """
+    define the calling arguments for AddObject
+    """
+
+    def __init__(self, object_name = '', parameter_key = ''):
+        self.ObjectName = object_name
+        self.ParameterKey = parameter_key
+
+
+class AddObjectResponse:
+    """
+    define the arguments for AddObjectResponse
+    """
+
+    def __init__(self, instance_num = 1, status = 0):
+        self.InstanceNumber = str(instance_num)
+        self.Status = str(status)
+
+
+class AllQueuedTransferStruct:
+    """
+    define AllQueuedTransferStruct
+    """
+
+    def __init__(self, command_key = '', state = 1, is_download = 0, file_type = '', file_size = 0, target_file_name = ''):
+        self.CommandKey = command_key
+        self.State = str(state)
+        self.IsDownload = str(is_download)
+        self.FileType = file_type
+        self.FileSize = str(file_size)
+        self.TargetFileName = target_file_name
+
+
+class ArgStruct:
+    """
+    define ArgStruct
+    """
+
+    def __init__(self, name = '', value = ''):
+        self.Name = name
+        self.Value = value
+
+
+class AutonomousDUStateChangeComplete:
+    """
+    define the calling arguments for AutonomousDUStateChangeComplete
+    """
+
+    def __init__(self):
+        self.Results = []
+
+
+class AutonomousDUStateChangeCompleteResponse:
+    """
+    define the arguments for AutonomousDUStateChangeCompleteResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class AutonomousTransferComplete:
+    """
+    define the calling arguments for AutonomousTransferComplete
+    """
+
+    def __init__(self, announce_url = '', transfer_url = '', is_download = 0, file_type = '', file_size = 0, target_file_name = '', start_time = '0001-01-01T00:00:00', complete_time = '0001-01-01T00:00:00'):
+        self.AnnounceURL = announce_url
+        self.TransferURL = transfer_url
+        self.IsDownload = str(is_download)
+        self.FileType = file_type
+        self.FileSize = str(file_size)
+        self.TargetFileName = target_file_name
+        self.FaultStruct = []
+        self.StartTime = start_time
+        self.CompleteTime = complete_time
+
+
+class AutonomousTransferCompleteResponse:
+    """
+    define the arguments for AutonomousTransferCompleteResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class AutonOpResultStruct:
+    """
+    define OpResultStruct
+    """
+
+    def __init__(self, uuid = '', deployment_unit_ref = '', version = '', current_state = '', resolved = 0, execution_unitreflist = '', start_time = '0001-01-01T00:00:00', complete_time = '0001-01-01T00:00:00', operation_performed = ''):
+        self.UUID = uuid
+        self.DeploymentUnitRef = deployment_unit_ref
+        self.Version = version
+        self.CurrentState = current_state
+        self.Resolved = str(resolved)
+        self.ExecutionUnitRefList = execution_unitreflist
+        self.StartTime = start_time
+        self.CompleteTime = complete_time
+        self.Fault = []
+        self.OperationPerformed = operation_performed
+
+
+class CancelTransfer:
+    """
+    define the calling arguments for CancelTransfer
+    """
+
+    def __init__(self, command_key = ''):
+        self.CommandKey = command_key
+
+
+class CancelTransferResponse:
+    """
+    define the arguments for CancelTransferResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class ChangeDUState:
+    """
+    define the calling arguments for ChangeDUState
+    """
+
+    def __init__(self, command_key = ''):
+        self.Operations = []
+        self.CommandKey = command_key
+
+
+class ChangeDUStateResponse:
+    """
+    define the arguments for ChangeDUStateResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class DeleteObject:
+    """
+    define the calling arguments for DeleteObject
+    """
+
+    def __init__(self, object_name = '', parameter_key = ''):
+        self.ObjectName = object_name
+        self.ParameterKey = parameter_key
+
+
+class DeleteObjectResponse:
+    """
+    define the arguments for DeleteObjectResponse
+    """
+
+    def __init__(self, status = 0):
+        self.Status = str(status)
+
+
+class DeviceIdStruct:
+    """
+    define DeviceIdStruct
+    """
+
+    def __init__(self, manufacturer = '', oui = '', product_class = '', serial_number = ''):
+        self.Manufacturer = manufacturer
+        self.OUI = oui
+        self.ProductClass = product_class
+        self.SerialNumber = serial_number
+        self.ConnectionRequestURL = ''
+        self.Hardwareversion = ''
+        self.Softwareversion = ''
+
+
+class Download:
+    """
+    define the calling arguments for Download
+    """
+
+    def __init__(self, command_key = '', file_type = '', url = '', username = '', password = '', file_size = 0, target_filename = '', delay_seconds = 0, success_url = '', failure_url = ''):
+        self.CommandKey = command_key
+        self.FileType = file_type
+        self.URL = url
+        self.Username = username
+        self.Password = password
+        self.FileSize = str(file_size)
+        self.TargetFileName = target_filename
+        self.DelaySeconds = str(delay_seconds)
+        self.SuccessURL = success_url
+        self.FailureURL = failure_url
+
+
+class DownloadResponse:
+    """
+    define the arguments for DownloadResponse
+    """
+
+    def __init__(self, status = 0, start_time = '0001-01-01T00:00:00', complete_time = '0001-01-01T00:00:00'):
+        self.Status = str(status)
+        self.StartTime = start_time
+        self.CompleteTime = complete_time
+
+
+class DUStateChangeComplete:
+    """
+    define the calling arguments for DUStateChangeComplete
+    """
+
+    def __init__(self, command_key = ''):
+        self.Results = []
+        self.CommandKey = command_key
+
+
+class DUStateChangeCompleteResponse:
+    """
+    define the arguments for DUStateChangeCompleteResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class EventStruct:
+    """
+    define EventStruct
+    """
+
+    def __init__(self, event_code = '', command_key = ''):
+        self.EventCode = event_code
+        self.CommandKey = command_key
+
+
+class FactoryReset:
+    """
+    define the calling arguments for FactoryReset
+    """
+
+    def __init__(self):
+        pass
+
+
+class FactoryResetResponse:
+    """
+    define the arguments for FactoryResetResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class FaultStruct:
+    """
+    define FaultStruct
+    """
+
+    def __init__(self, fault_code = 8000, fault_string = ''):
+        self.FaultCode = str(fault_code)
+        self.FaultString = fault_string
+
+
+class GetAllQueuedTransfers:
+    """
+    define the calling arguments for GetAllQueuedTransfers
+    """
+
+    def __init__(self):
+        pass
+
+
+class GetAllQueuedTransfersResponse:
+    """
+    define the calling arguments for GetAllQueuedTransfersResponse
+    """
+
+    def __init__(self):
+        self.TransferList = []
+
+
+class GetOptions:
+    """
+    define the calling arguments for GetOptions
+    """
+
+    def __init__(self, option_name = ''):
+        self.OptionName = option_name
+
+
+class GetOptionsResponse:
+    """
+    define the arguments for GetOptionsResponse
+    """
+
+    def __init__(self):
+        self.OptionList = []
+
+
+class GetParameterAttributes:
+    """
+    define the calling arguments for GetParameterAttributes
+    """
+
+    def __init__(self):
+        self.ParameterNames = []
+
+
+class GetParameterAttributesResponse:
+    """
+    define the arguments for GetParameterAttributesResponse
+    """
+
+    def __init__(self):
+        self.ParameterList = []
+
+
+class GetParameterNames:
+    """
+    define the calling arguments for GetParameterNames
+    """
+
+    def __init__(self, path = '', next_level = 0):
+        self.ParameterPath = path
+        self.NextLevel = str(next_level)
+
+
+class GetParameterNamesResponse:
+    """
+    define the arguments for GetParameterNamesResponse
+    """
+
+    def __init__(self):
+        self.ParameterList = []
+
+
+class GetParameterValues:
+    """
+    define the calling arguments for GetParameterValues
+    """
+
+    def __init__(self):
+        self.ParameterNames = []
+
+
+class GetParameterValuesResponse:
+    """
+    define the arguments for GetGarameterValuesResponse
+    """
+
+    def __init__(self):
+        self.ParameterList = []
+
+
+class GetQueuedTransfers:
+    """
+    define the calling arguments for GetQueuedTransfers
+    """
+
+    def __init__(self):
+        pass
+
+
+class GetQueuedTransfersResponse:
+    """
+    define the arguments for GetQueuedTransfersResponse
+    """
+
+    def __init__(self):
+        self.TransferList = []
+
+
+class GetRPCMethods:
+    """
+    define the calling arguments for GetRPCMethods
+    """
+
+    def __init__(self):
+        pass
+
+
+class GetRPCMethodsResponse:
+    """
+    define the arguments for GetRPCMethodsResponse
+    """
+
+    def __init__(self):
+        self.MethodList = []
+
+
+class Inform:
+    """
+    define the calling arguments for Inform
+    """
+
+    def __init__(self):
+        self.DeviceId = []
+        self.Event = []
+        self.MaxEnvelopes = '1'
+        self.CurrentTime = '0001-01-01T00:00:00'
+        self.RetryCount = '0'
+        self.ParameterList = []
+
+
+class InformResponse:
+    """
+    define the arguments for InformResponse
+    """
+
+    def __init__(self, max_envelopes = 1):
+        self.MaxEnvelopes = str(max_envelopes)
+
+
+class InstallOpStruct:
+    """
+    define InstallOpStruct
+    """
+
+    def __init__(self, url = '', uuid = '', username = '', password = '', execution_envref = ''):
+        self.URL = url
+        self.UUID = uuid
+        self.Username = username
+        self.Password = password
+        self.ExecutionEnvRef = execution_envref
+        self.Name = 'InstallOpStruct'
+
+
+class Kicked:
+    """
+    define the calling arguments for Kicked
+    """
+
+    def __init__(self, command = '', referer = '', arg = '', next = ''):
+        self.Command = command
+        self.Referer = referer
+        self.Arg = arg
+        self.Next = next
+
+
+class KickedResponse:
+    """
+    define the arguments for KickedResponse
+    """
+
+    def __init__(self, next_url = ''):
+        self.NextURL = next_url
+
+
+class OpResultStruct:
+    """
+    define OpResultStruct
+    """
+
+    def __init__(self, uuid = '', deployment_unit_ref = '', version = '', current_state = '', resolved = 0, execution_unitreflist = '', start_time = '0001-01-01T00:00:00', complete_time = '0001-01-01T00:00:00'):
+        self.UUID = uuid
+        self.DeploymentUnitRef = deployment_unit_ref
+        self.Version = version
+        self.CurrentState = current_state
+        self.Resolved = str(resolved)
+        self.ExecutionUnitRefList = execution_unitreflist
+        self.StartTime = start_time
+        self.CompleteTime = complete_time
+        self.Fault = []
+
+
+class OptionStruct:
+    """
+    define OptionStruct
+    """
+
+    def __init__(self, option_name = '', voucher_sn = 0, state = 1, mode = 0, start_date = '0001-01-01T00:00:00', expiration_date = '0001-01-01T00:00:00', is_transferable = 0):
+        self.OptionName = option_name
+        self.VoucherSN = str(voucher_sn)
+        self.State = str(state)
+        self.Mode = str(mode)
+        self.StartDate = start_date
+        self.ExpirationDate = expiration_date
+        self.IsTransferable = str(is_transferable)
+
+
+class ParameterAttributeStruct:
+    """
+    define ParameterAttributeStruct
+    """
+
+    def __init__(self, name = '', notification = 0):
+        self.Name = name
+        self.Notification = str(notification)
+        self.AccessList = []
+
+
+class ParameterInfoStruct:
+    """
+    define ParameterInfoStruct
+    """
+
+    def __init__(self, name = '', writable = 0):
+        self.Name = name
+        self.Writable = str(writable)
+
+
+class ParameterValueStruct:
+    """
+    define ParameterValueStruct
+    """
+
+    def __init__(self, name = '', value = '', value_type = ''):
+        self.Name = name
+        self.Value = value
+        self.Value_type = value_type
+
+
+class QueuedTransferStruct:
+    """
+    define QueuedTransferStruct
+    """
+
+    def __init__(self, command_key = '', state = 1):
+        self.CommandKey = command_key
+        self.State = str(state)
+
+
+class Reboot:
+    """
+    define the calling arguments for Reboot
+    """
+
+    def __init__(self, command_key = ''):
+        self.CommandKey = command_key
+
+
+class RebootResponse:
+    """
+    define the arguments for RebootResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class RequestDownload:
+    """
+    define the calling arguments for RequestDownload
+    """
+
+    def __init__(self, file_type = ''):
+        self.FileType = file_type
+        self.FileTypeArg = []
+
+
+class RequestDownloadResponse:
+    """
+    define the arguments for RequestDownloadResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class ScheduleDownload:
+    """
+    define the calling arguments for ScheduleDownload
+    """
+
+    def __init__(self, command_key = '', file_type = '', url = '', username = '', password = '', file_size = 0, target_file_name = ''):
+        self.CommandKey = command_key
+        self.FileType = file_type
+        self.URL = url
+        self.Username = username
+        self.Password = password
+        self.FileSize = str(file_size)
+        self.TargetFileName = target_file_name
+        self.TimeWindowList = []
+
+
+class ScheduleDownloadResponse:
+    """
+    define the arguments for ScheduleDownloadResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class ScheduleInform:
+    """
+    define the calling arguments for ScheduleInform
+    """
+
+    def __init__(self, delay_seconds = 0, command_key = ''):
+        self.DelaySeconds = str(delay_seconds)
+        self.CommandKey = command_key
+
+
+class ScheduleInformResponse:
+    """
+    define the arguments for ScheduleInformResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class SetParameterAttributes:
+    """
+    define the calling arguments for SetParameterAttributes
+    """
+
+    def __init__(self):
+        self.ParameterList = []
+
+
+class SetParameterAttributesResponse:
+    """
+    define the arguments for SetParameterAttributesResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class SetParameterAttributesStruct:
+    """
+    define SetParameterAttributesStruct
+    """
+
+    def __init__(self, name = '', notification_change = 0, notification = 0, access_list_change = 0):
+        self.Name = name
+        self.NotificationChange = str(notification_change)
+        self.Notification = str(notification)
+        self.AccessListChange = str(access_list_change)
+        self.AccessList = []
+
+
+class SetParameterValues:
+    """
+    define the calling arguments for SetParameterValues
+    """
+
+    def __init__(self, parameter_key = ''):
+        self.ParameterList = []
+        self.ParameterKey = parameter_key
+
+
+class SetParameterValuesResponse:
+    """
+    define the arguments for SetParameterValuesResponse
+    """
+
+    def __init__(self, status = 0):
+        self.Status = str(status)
+
+
+class SetVouchers:
+    """
+    define the calling arguments for SetVouchers
+    """
+
+    def __init__(self):
+        self.VoucherList = []
+
+
+class SetVouchersResponse:
+    """
+    define the arguments for SetVouchersResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class TimeWindowStruct:
+    """
+    define TimeWindowStruct
+    """
+
+    def __init__(self, window_start = 0, window_end = 0, window_mode = '', user_msg = '', max_retries = 0):
+        self.WindowStart = str(window_start)
+        self.WindowEnd = str(window_end)
+        self.WindowMode = window_mode
+        self.UserMessage = user_msg
+        self.MaxRetries = str(max_retries)
+
+
+class TransferComplete:
+    """
+    define the calling arguments for TransferComplete
+    """
+
+    def __init__(self, command_key = '', start_time = '0001-01-01T00:00:00', complete_time = '0001-01-01T00:00:00'):
+        self.CommandKey = command_key
+        self.FaultStruct = []
+        self.StartTime = start_time
+        self.CompleteTime = complete_time
+
+
+class TransferCompleteResponse:
+    """
+    define the arguments for TransferCompleteResponse
+    """
+
+    def __init__(self):
+        pass
+
+
+class UninstallOpStruct:
+    """
+    define UninstallOpStruct
+    """
+
+    def __init__(self, uuid = '', version = '', execution_envref = ''):
+        self.UUID = uuid
+        self.Version = version
+        self.ExecutionEnvRef = execution_envref
+        self.Name = 'UninstallOpStruct'
+
+
+class UpdateOpStruct:
+    """
+    define UpdateOpStruct
+    """
+
+    def __init__(self, uuid = '', version = '', url = '', username = '', password = ''):
+        self.UUID = uuid
+        self.Version = version
+        self.URL = url
+        self.Username = username
+        self.Password = password
+        self.Name = 'UpdateOpStruct'
+
+
+class Upload:
+    """
+    define the calling arguments for Upload
+    """
+
+    def __init__(self, command_key = '', file_type = '', url = '', username = '', password = '', delay_seconds = 0):
+        self.CommandKey = command_key
+        self.FileType = file_type
+        self.URL = url
+        self.Username = username
+        self.Password = password
+        self.DelaySeconds = str(delay_seconds)
+
+
+class UploadResponse:
+    """
+    define the arguments for UploadResponse
+    """
+
+    def __init__(self, status = 0, start_time = '0001-01-01T00:00:00', complete_time = '0001-01-01T00:00:00'):
+        self.Status = str(status)
+        self.StartTime = start_time
+        self.CompleteTime = complete_time
+
+
+class Fault:
+    """
+    define the arguments for Fault message
+    """
+
+    def __init__(self, fault_code = '', fault_string = ''):
+        self.faultcode = fault_code
+        self.faultstring = fault_string
+        self.detail = []
+
+
+class CWMPFaultStruct:
+    """
+    define the struct of cwmp:Fault
+    """
+
+    def __init__(self, fault_code = '', fault_string = ''):
+        self.FaultCode = fault_code
+        self.FaultString = fault_string
+        self.SetParameterValuesFaultList = []
+
+
+class SetParameterValuesFaultStruct:
+    """
+    define the struct of SetParameterValuesFault
+    """
+
+    def __init__(self):
+        self.ParameterName = ''
+        self.FaultCode = ''
+        self.FaultString = ''

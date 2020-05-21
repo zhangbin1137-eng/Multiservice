@@ -1,0 +1,14 @@
+# Embedded file name: lib\common\releasecfg.py
+import os
+import sys
+import TR069.lib.common.logs.log as log
+try:
+    import webservercfg
+except Exception as e:
+    try:
+        import attlog as log
+    except Exception as e:
+        pass
+
+if __name__ == '__main__':
+    pass

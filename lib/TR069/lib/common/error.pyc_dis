@@ -1,0 +1,13 @@
+# Embedded file name: lib\common\error.py
+"""
+    nwf 2012-08-13  V1.0
+                    1\xe3\x80\x81define error code
+                     
+
+
+"""
+_ERR_START = 0
+ERR_SUCCESS = _ERR_START + 0
+ERR_FAIL = _ERR_START + 1
+ERR_FATAL = _ERR_START + 2
+__all__ = ['ERR_SUCCESS', 'ERR_FAIL', 'ERR_FATAL']
